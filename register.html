@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+   <title>Register</title>
+   <link rel="stylesheet" href="css/Master.css">
+  <style>
+body {
+       display: flex;
+        height: 100vh;
+       justify-content: centre;
+       align-items:center;
+       background-image: url(bgr.jpg);
+       text-align: centre; background-size: cover;    
+} 
+input {
+border-radius: 5px;
+display: inline-block;
+padding: 10px;
+}
+div{
+        display: inline-block;
+}
+form{
+        background-color: rgba(235, 50, 136, 0.281);
+        color: #2a0738;
+        border-radius: 8px;
+        border-color: #1f032b;
+        width: 510px;
+        height: 595px;
+        padding: 20px;
+        margin-top: 40px;
+        margin-left: -50px;
+        font-weight: 900;
+        text-align: center;
+} 
+h2{
+        display: inline-block;
+        text-align: center;
+        min-width: 50px;
+        letter-spacing: 2px;
+}
+
+.name{
+        margin-right: 180px;
+}
+.email{
+        margin-right: 175px;
+}
+.date{
+        margin-right: 88px;
+        margin-left: -20px;
+}
+.pass{
+        margin-right: 135px;
+        margin-left: -5px;
+}
+.cpass{
+        margin-right: 25px;
+        margin-left: -10px;
+}
+.gen{
+        margin-right: 143px;
+margin-left: 9px;
+}
+#bu1,button{
+        background: linear-gradient(135deg, #71b7e6, #9750b3);
+}
+.m{
+        display: inline-block;
+        background-image: url("../—Pngtree—creative football playersdazzling silhouettes_4266582.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: 200px;
+        width: 500px;
+        height: 615px;
+}
+.b{
+   
+        display: inline-block;
+        background-image: url("../—Pngtree—silhouettes of creative badminton players_4266576.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: right;
+        width: 500px;
+        height: 615px;     
+}
+  </style>
+      <script type="text/javascript"> 
+        function validateForm() {
+        var valid = true;
+        if(document.inputForm.name.value==""){
+        alert("Name is empty");
+        document.inputForm.name.focus();
+        valid=false; }
+        else if(document.inputForm.email.value==""){
+        alert("Email is empty");
+        document.inputForm.email.focus();
+        valid=false; }
+        else if(document.inputForm.email.value.indexOf("@")==-1||document.inputForm.email.value.indexOf(".")==-1){
+        alert("Please Enter valid email, e.g:info@yahoo.com");
+        document.inputForm.email.focus();
+        valid=false; }
+        else if (document.inputForm.password.value != document.inputForm.cpassword.value){
+   alert("password and confirm password not identical")
+   document.inputForm.password.focus();
+   valid=false;}
+
+       else {window.location.href="index.html"}
+        return valid;}
+ </script>
+  </head>
+ <body>
+        <p class="m">
+        </p>
+    <div class="register">
+      <form action="Home.html" method="POST" target="_blank" class="form form--hidden" id="createAccount" 
+      name="inputForm" onsubmit="return validateForm()" >
+        <h1 class="form__title">Registration</h1>
+       
+         <h2 class="name">Name</h2>
+         <input type="text" id="name" placeholder="Enter Your Name" required autofocus name="name" >
+        
+        
+        <br/>
+        <br/>
+        
+         <h2 class="email">Email</h2>
+         <input type="email"  class="form__input" placeholder="Enter Your Email" required name="email">
+         
+        <br/>
+        <br/>
+        <div class="date"><h2>Date of Birth</h2></div>
+        <input type="date" id="userd" name="date" value="2021-01-01" placeholder="01/01/2021" required>
+        <br/>
+        <br/>
+        <label class="gen">
+          <h2>Gender:</h2>
+        </label>
+        <input type="radio" name="Gender" value="Male" id="male" checked>
+        <label for="male">
+         <h2>Male</h2> 
+        </label>
+      
+        <input type="radio" name="Gender" value="Female" id="female">
+        <label for="female">
+         <h2> Female</h2>
+        </label>
+        <br/>
+        <br/>
+        
+         <h2 class="pass">Password</h2>
+         <input type="password" class="form__input" placeholder="Enter strong password" name="password" required >   
+        <br/>
+         <h2 class="cpass">Confirm Password</h2>
+         <input type="password" class="form__input"  placeholder="Enter password again" name="cpassword" required>
+        <br/> 
+        <input  type="submit"  value="Register Now"  id="bu1" >
+    
+        <button id="button1"><a href="login.html">back</a></button>
+    </div>
+ </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <title>SPIKI</title>
+        <style>
+    body{background: white url(bg1.jpg) no-repeat fixed center;
+               background-size: cover;}
+            header{background-color:  rgb(228 181 212 / 34%); padding: 1em; text-shadow: aqua;text-align:center }
+            #headline{color:rgb(43, 43, 102); text-align: center;font-size: 50px;height: 7px; }
+            #button1{text-align: center;width: 10%;padding: 6px 0px 6px 5px ;margin: -1000px 5px 5px 80%; 
+                border: none;border-radius: 4px;background-color: rgb(105, 114, 189) ;border: 5px solid rgb(52, 52, 75);
+             font-size: 25px;}
+             footer{
+                background-color: rgb(228 181 212 / 34%); text-align: center;  
+             }
+             #sidebar{position : fixed;width :10%; height :39%; left: -10%;background-color: rgb(44, 48, 82);}
+             #sidebar li{color : rgb(252, 255, 250);font-size: 25px;padding: 10px; border-bottom: 0.5px solid rgb(235, 230, 230);text-align: center;}
+             .toggle-btn{position:absolute;left:120%; top: 40px;}
+             .toggle-btn span{display: block;background-color: rgb(66, 24, 54);width: 30px;height: 5px;margin:3px;}
+              #sidebar.active{ left: 0;;}
+              aside{background: rgb(228 181 212 / 34%);width:20% ;height:100% ;float:left; margin: 5px;}
+             #intr{font-size: 22px; text-align: center;color: rgb(67, 67, 110);}
+             #head2{font-weight:900 ; color: rgb(43, 13, 102);font-size: 29px;}
+           img{float:left;}
+           footer{float:buttom;}
+           p{font-size: 20px; }
+           h3{font-weight: 1000; font-size: 22px;}
+           :root{
+              --main-color:white;
+  }
+  body{
+    background-color: var(--main-color);
+   
+}
+
+         </style>
+            <script type="text/javascript">
+                function menu()
+                {
+                    document.getElementById('sidebar').classList.toggle('active');
+                }
+           
+            </script>
+    </head>
+    <body vlink="white">
+        <header>
+            <div id="sidebar" . onclick="menu()">
+                <div class="toggle-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href= "index.html">Home</a></li>
+                    <li><a href = "FG.html">Fighting Sports</a></li>
+                    <li><a href = "TG.html">Team Sports</a></li>
+                    
+                
+                </ul>
+            </div>
+           <h1 id="headline"> WELCOME IN SPIKI</h1>
+            <button id="button1"><a href="login.html">Logout</a></button>
+        </header><aside><article>
+            <h2 id="header2"><b>Welcome To Our SPIKI</b></h2>
+            <p id="intr"> <b>SPIKI</b> is abbreviation of <b>Sport Wikipedia</b>. Here You Will Know More About Sports(Fighting Sports , Team Sports).<br>
+              This Site Will Be Helpful To Everyone Who Interested In Sports.<br><b>Sport</b>
+               is the performance of certain movements with bodily action, sequential arrangement and specific to human skills; For different goals such as treatment, entertainment, competition, excellence, and strength, and it also requires perseverance until reaching the best, better, better, better and harmonious performance according to the type of sport being practiced.</p>
+        </article>
+        </aside>
+        <article id="a1"><img src="tt.jpg" width="200" height="150" id="m1"/>
+            <h3 id="teamsports">Team Sports</h3>
+            <p>They are sports that require team spirit to work with each other in a harmonious and harmonious manner,
+                and the most famous examples of them are:</p>
+                <ul>
+                    <li><p>Football of all kinds:It is a game that is not hidden from anyone to what extent its players enjoy high physical
+                         fitness, speed, strength, agility in movement, sharp intelligence, and teamwork that some other 
+                         types of sports lack, not to mention the physical and psychological benefits resulting from this sport.</p></li>
+                    <li><p>Basketball and volleyball:two different sports, but they are somewhat similar,
+                         as they need coordinated collective planning that raises the level of intelligence of the players,
+                          and increases strength, speed, and concentration, and this is why doctors prefer those who suffer
+                           from short stature to practice these two sports; Which helps to increase height,
+                            as they maintain physical fitness, burn excess fat, and self-confidence.  </p></li>
+                </ul>
+        </article>
+        <article><img src="ft2.jpeg" width="200" height="150" id="m2" />
+            <h3 id="fighting sports">Fighting Sports</h3> 
+            <p>Many people seek to be the world champion in one of these sports,because it gives self-confidence,
+                but it is one of the necessary things for every individual whether male or female;This 
+                is due to its importance in self-defense in critical situations, among the most famous combat games: </p>
+                <ul>
+                    <li><p>Boxing:a very strong sport,it needs an iron body,it is very useful if used properly,
+                         and this helps to give a person a strength that is lacking in many other fighting games, 
+                         as athletes consider it one of the strongest games that help in self-defense if necessary.</p></li>
+                    <li><p>Karate:a beautiful sport that gives a person self-confidence, not to mention the supernatural wisdom and
+                         intelligence that this game contains. This gives a person high concentration power, quick intuition,
+                         awesome endurance, and excellent physical agility, all of this in the game of Karate and the like,
+                         such as Taekwondo and Kungfu , Aikido, and many more.  
+                        </p></li>     
+                </ul>
+        </article>
+        <footer>
+            <p> References:from reliable source  &  property rights&copy;sports lover</p> 
+        </footer>
+       <script>
+      const headline=document.getElementById("headline");
+        if(localStorage.getItem("header")==null){
+            headline.innerHTML="WELCOME IN SPIKI";
+        }else{
+            headline.innerHTML=localStorage.getItem("header");
+        }
+       const teamsp=document.getElementById("teamsports");
+        if(localStorage.getItem("teams")==null){
+            teamsp.innerHTML="Team Sports";}else{
+            teamsp.innerHTML=localStorage.getItem("teams");
+        }
+        
+        const fightsp=document.getElementById("fighting sports");
+        if(localStorage.getItem("fightings")==null){
+              fightsp.innerHTML="Fighting Sports";
+        }else{
+              fightsp.innerHTML=localStorage.getItem("fightings");
+        } 
+        function setColor(color){
+    document.documentElement.style.setProperty("--main-color",color);};
+
+            setColor(localStorage.getItem("mainColor")||"white");
+    </script>
+
+     
+    </body>
+</html>
